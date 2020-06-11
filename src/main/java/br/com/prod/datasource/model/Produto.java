@@ -31,6 +31,15 @@ public class Produto implements Serializable{
 	@Column(name= "url_img")
 	private String urlImg;
 	
+	public Produto(Long id, String nome, float valor, String desc, String urlImg) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.valor = valor;
+		this.desc = desc;
+		this.urlImg = urlImg;
+	}
+
 	public Produto() {
 		
 	}
@@ -64,6 +73,12 @@ public class Produto implements Serializable{
 	}
 	public void setUrlImg(String url_img) {
 		this.urlImg = url_img;
+	}
+
+	@Override
+	public String toString() {
+		return "Produto [id=" + id + ", nome=" + nome + ", valor=" + valor + ", desc=" + desc + ", urlImg=" + urlImg
+				+ "]";
 	}
 	
 	

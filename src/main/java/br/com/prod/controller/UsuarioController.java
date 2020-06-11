@@ -63,10 +63,10 @@ public class UsuarioController {
 	
 	//UPDATE
 	@PutMapping(path = "cusuario/update/{id}")
-	public void updateUsuario(
+	public Usuario updateUsuario(
 			@PathVariable(name = "id", required = true)Long idUsuario,
 			@RequestBody UsuarioResource usuarioResource ){
-		serviceUpdate.updateUsuario(idUsuario, usuarioResource);
+		return serviceUpdate.updateUsuario(idUsuario, usuarioResource);
 		
 	}
 	

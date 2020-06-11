@@ -1,6 +1,8 @@
 package br.com.prod.service;
 
-import java.time.LocalDate;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.springframework.stereotype.Component;
 
@@ -15,7 +17,7 @@ public class UsuarioConversor {
 		
 		try {
 			Usuario usuario = new Usuario();
-			LocalDate dateUsuario = checkDateUsuario(usuarioResource.getNascimento());
+			Date dateUsuario = checkDateUsuario(usuarioResource.getNascimento());
 			usuario.setNascimento(dateUsuario);
 			usuario.setFirstName(usuarioResource.getFirstName());
 			usuario.setLastName(usuarioResource.getLastName());
@@ -34,12 +36,19 @@ public class UsuarioConversor {
 			
 	}
 	
-	public LocalDate checkDateUsuario(String nascimento) throws UsuarioResourceException {
+	public Date checkDateUsuario(String nascimento) throws UsuarioResourceException {
+		Date aDate = null;
+		
 		try {
-			return LocalDate.parse(nascimento);
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+			aDate = dateFormat.parse(nascimento);
+			
+			 
+			 return aDate;
 		}catch(Exception e) {
-			throw new  UsuarioResourceException("Falha ao converter resource para entidade, nascimento: " + nascimento);
+			throw new  UsuarioResourceException("Falha ao converter resource para entidade, nascimento: " + nascimento + "" + "parse:" + aDate);
 		}
+		
 	}
 	
 }

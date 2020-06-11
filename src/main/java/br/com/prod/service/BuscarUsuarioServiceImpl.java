@@ -19,7 +19,7 @@ public class BuscarUsuarioServiceImpl {
 	
 	public List<Usuario> buscarTodosOsUsuarios(){
 		
-		LOG.info("Serviço para buscar todos Produtos sendo executado");
+		LOG.info("Serviço para buscar todos Usuarios sendo executado");
 		
 		List<Usuario> listaUsuario = usuarioRepository.findAll();
 	

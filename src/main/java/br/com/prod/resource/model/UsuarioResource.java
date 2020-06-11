@@ -10,17 +10,17 @@ public class UsuarioResource {
 	
 	
 	private String id;
-	@JsonProperty("first_name")
+	@JsonProperty("firstName")
 	private String firstName;
-	@JsonProperty("last_name")
+	@JsonProperty("lastName")
 	private String lastName;
 	@JsonProperty("email")
 	private String email;
-	@JsonProperty("password")
+	@JsonProperty("senha")
 	private String senha;
-	@JsonProperty("birth_date")
+	@JsonProperty("nascimento")
 	private String nascimento;
-	@JsonProperty("address")
+	@JsonProperty("endereco")
 	private String endereco;
 	@JsonProperty("privilege")
 	private String privilege;

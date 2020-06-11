@@ -22,7 +22,6 @@ public class CadastroProduto {
 	
 	public void cadastro(ProdutoResource produtoResource){
 		
-		
 		try {
 			Produto produto = service.conversor(produtoResource);
 			produtoRepository.saveAndFlush(produto);

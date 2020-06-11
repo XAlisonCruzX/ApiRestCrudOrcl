@@ -71,10 +71,10 @@ public class PedidoController {
 	
 	//UPDATE
 	@PutMapping(path = "cpedido/update/{id}")
-	public void updatePedido(
+	public Pedido updatePedido(
 			@PathVariable(name = "id", required = true)Long idPedido,
 			@RequestBody PedidoResource pedidoResource ){
-		serviceUpdate.updatePedido(idPedido, pedidoResource);
+		return serviceUpdate.updatePedido(idPedido, pedidoResource);
 		
 	}	
 	

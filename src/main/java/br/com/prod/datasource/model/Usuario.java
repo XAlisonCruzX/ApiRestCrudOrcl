@@ -1,7 +1,7 @@
 package br.com.prod.datasource.model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,7 +31,7 @@ public class Usuario implements Serializable {
 	@Column(name = "password")
 	private String senha;
 	@Column(name = "data_nascimento")
-	private LocalDate nascimento;
+	private Date nascimento;
 	private String endereco;
 	private String privilege;
 	
@@ -79,11 +79,11 @@ public class Usuario implements Serializable {
 		this.senha = senha;
 	}
 
-	public LocalDate getNascimento() {
+	public Date getNascimento() {
 		return nascimento;
 	}
 
-	public void setNascimento(LocalDate nascimento) {
+	public void setNascimento(Date nascimento) {
 		this.nascimento = nascimento;
 	}
 

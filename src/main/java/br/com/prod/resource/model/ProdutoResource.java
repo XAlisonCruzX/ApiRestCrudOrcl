@@ -6,13 +6,13 @@ public class ProdutoResource {
 	
 	
 	private String id;
-	@JsonProperty("nome_produto")
+	@JsonProperty("Nome")
 	private String nome;
 	@JsonProperty("valor")
 	private String valor;
-	@JsonProperty("description")
+	@JsonProperty("desc")
 	private String desc;
-	@JsonProperty("url_img")
+	@JsonProperty("urlImg")
 	private String urlImg;
 	
 	public ProdutoResource(String nome, String valor, String desc, String urlImg) {
