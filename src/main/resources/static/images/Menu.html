@@ -1,0 +1,17 @@
+<html xmlns:th = "http://thymeleag.org"
+	  xmlns:layout = "http://www.ultraq.net.nz/thymeleaf/layout">
+	  
+<head>
+	<title>Menu</title>
+</head>	  
+	  <h1>Lista Produto</h1>
+	  <h3><a href = "/web/produto/save">Cadastro</a></h3>
+	  
+	  <div th:each="produto : ${produtos}">
+	  		<div class="row">
+	  			<p><span th:text= "${produto.nome}"></span></p>
+	  		</div>
+	  
+	  </div>
+	  
+</html>
