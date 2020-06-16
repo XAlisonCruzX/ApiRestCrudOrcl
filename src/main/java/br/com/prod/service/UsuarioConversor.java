@@ -40,7 +40,8 @@ public class UsuarioConversor {
 		Date aDate = null;
 		
 		try {
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");		
+			
 			aDate = dateFormat.parse(nascimento);
 			
 			 

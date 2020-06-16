@@ -84,6 +84,7 @@ public class Usuario implements Serializable {
 	}
 
 	public void setNascimento(Date nascimento) {
+		
 		this.nascimento = nascimento;
 	}
 

@@ -1,4 +1,4 @@
-package teste;
+package br.com.prod.webclient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +11,12 @@ import javax.ws.rs.core.Response;
 
 import br.com.prod.datasource.model.Produto;
 
+public class ProdutoWEB {
 
-public class Teste {
-	
 	private static Client client = ClientBuilder.newClient();
-	private WebTarget baseTarget = client.target("http://192.168.0.100:8080/api/");
+	private WebTarget baseTarget = client.target("http://localhost:8080/api/");
 	
-	public Produto getById(Long id) {
+	public Produto getById(String id) {
 	
 		WebTarget produtoTarget = this.baseTarget.path("produto");
 		WebTarget singleProdutoTarget = produtoTarget.path("id/{id}");
@@ -58,7 +57,7 @@ public class Teste {
 		return putResponse.readEntity(Produto.class);
 	}
 	
-	public Response deleteById(Long id) {
+	public Response deleteById(String id) {
 		
 	
 		WebTarget deleteTarget = this.baseTarget.path("delete/produto/{id}");
@@ -68,8 +67,4 @@ public class Teste {
 	}
 	
 	
-	
-	
-	
-
 }
